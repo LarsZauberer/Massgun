@@ -20,7 +20,6 @@ setup(
             ],
             'platforms': [
                 'win_amd64',
-                'manylinux1_x86_64',
             ]
         }
     },

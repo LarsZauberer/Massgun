@@ -133,7 +133,6 @@ dmypy.json
 screenshot.png
 *.blend
 !src/defaultMeshes/*.blend
-Content/*
 !Content/classRegistry.py
 !Content/consoleCommands.py
 !Content/loadingScreen.png

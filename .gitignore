@@ -136,3 +136,5 @@ screenshot.png
 !Content/classRegistry.py
 !Content/consoleCommands.py
 !Content/loadingScreen.png
+!Content/interfaceRegistry.py
+!Content/widgetRegistry.py

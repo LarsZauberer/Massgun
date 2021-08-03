@@ -6,6 +6,8 @@ class buttonTrigger(TriggerBox):
     @tryFunc
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.ignoreCollisionTriggerNames = ["Massball"]
+        
         self.state = False
         
     

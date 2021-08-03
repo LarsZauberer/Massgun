@@ -13,7 +13,10 @@ class FirstPersonPlayer(DynamicObject):
         self.jumpForce = 20
         self.preJumpSpeed = Vec3(0, 0, 0)
 
-        super().__init__(app, name="Player", x=x, y=y, z=z, rx=rx, ry=ry, rz=rz, sx=sx, sy=sy, sz=sz, mass=60, model="defaultMeshes/cube.bam")
+        super().__init__(app, name="Player", x=x, y=y, z=z, rx=rx, ry=ry, rz=rz, sx=sx, sy=sy, sz=sz, mass=1000, model="defaultMeshes/cube.bam")
+        
+        # Set Camera at rotation
+        self.app.camera.setHpr(rx, ry, rz)
     
     @tryFunc
     def update(self, task):

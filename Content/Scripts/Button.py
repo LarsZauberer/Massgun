@@ -6,6 +6,7 @@ from Content.Scripts.buttonTrigger import buttonTrigger
 
 
 class Button(DynamicObject):
+    @tryFunc
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.baseModel = GameObject(self.app, name="base", x=kwargs["x"], y=kwargs["y"], z=kwargs["z"], model="models/button/Button_off.bam", ground=True)
@@ -13,21 +14,24 @@ class Button(DynamicObject):
         self.app.world.remove(self.node.node())
         self.node.hide()
         
-        ''' self.models = [self.app.loader.loadModel("Content/models/button/Button_off.bam"), self.app.loader.loadModel("Content/models/button/Button_on.bam")]
+        self.models = [self.app.loader.loadModel("Content/models/button/Button_off.bam"), self.app.loader.loadModel("Content/models/button/Button_on.bam")]
         
         self.on = False
         
-        self.models[0].reparentTo(self.baseModel.node)
+        self.models[0].reparentTo(self.app.render)
+        self.models[0].setPosHprScale(self.node.getPos(), self.node.getHpr(), self.node.getScale())
         self.models[0].show()
-        self.models[1].reparentTo(self.baseModel.node)
+        self.models[1].reparentTo(self.app.render)
+        self.models[1].setPosHprScale(self.node.getPos(), self.node.getHpr(), self.node.getScale())
         self.models[1].hide()
         
-        self.baseModel.node.hide() '''
+        self.baseModel.node.hide()
     
+    @tryFunc
     def update(self, task):
         super().update(task)
         
-        ''' log = self.app.getLogger(self.update)
+        log = self.app.getLogger(self.update)
         
         if self.bt.state:
             if not self.on:
@@ -38,8 +42,8 @@ class Button(DynamicObject):
         else:
             if self.on:
                 log.debug(f"Changing model to off")
-                self.models[0].hide()
-                self.models[1].show()
-                self.on = False '''
+                self.models[0].show()
+                self.models[1].hide()
+                self.on = False
         
         return task.cont

@@ -11,7 +11,7 @@ class Player(FirstPersonPlayer):
         self.jumpForce = 5
         self.shooted = False
         self.massballs = []
-        self.maxBalls = 0
+        self.maxBalls = 1
     
     @tryFunc
     def update(self, task):

@@ -4,9 +4,13 @@ A sample project for the Game Engine: Hekate
 
 ## Controls
 WASD: Moving
+
 Mouse: Look Around
+
 Space: Jump
+
 Left Mouse Button: Shooting
+
 Right Mouse Button: Reset Bullets
 
 ## Developer Console
